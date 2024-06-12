@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Para o meu Amor</title>
+    <meta http-equiv="refresh" content="30">
+    <meta name="keywords" content="palavras chaves">
+    <meta name="robots" content="index,follow">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-image: url('imagem/login.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body class="background">
+    <div class="container">
+        <h1>Para o meu Amor</h1>
+        <table border="1" cellpadding="10" cellspacing="0">
+            <tr>
+                <td>
+                    <form id="loginForm">
+                        <table>
+                            <tr>
+                                <td><label for="username">Nome do meu amor:</label></td>
+                                <td><input type="text" id="username" name="username" required></td>
+                            </tr>
+                            <tr>
+                                <td><label for="password">Amor do meu amor:</label></td>
+                                <td><input type="password" id="password" name="password" required></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" align="center">
+                                    <button type="button" id="loginButton">Login</button>
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        document.getElementById('loginButton').addEventListener('click', function() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            if (username && password) {
+                window.location.href = 'Amor.html';
+            } else {
+                alert('Por favor, preencha todos os campos.');
+            }
+        });
+    </script>
+</body>
+</html>
